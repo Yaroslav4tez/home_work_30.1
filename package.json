@@ -1,4 +1,12 @@
 {
+  "name": "home_work_30.1",
+  "version": "1.0.0",
+  "homepage": "https://yaroslav4tez.github.io/home_work_30.1/",
+  "scripts": {
+    "start": "webpack serve --mode development --config webpack.config.js",
+    "build": "webpack --mode production --config webpack.config.js",
+    "deploy": "gh-pages -d dist"
+  },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
@@ -13,12 +21,6 @@
     "redux-thunk": "^3.1.0",
     "webpack": "^5.102.0"
   },
-  "scripts": {
-    "start": "webpack serve --mode development --config webpack.config.js",
-    "build": "webpack --mode production --config webpack.config.js",
-    "homepage": "https://yaroslav4tez.github.io/home_work_30.1/",
-    "deploy": "gh-pages -d dist"
-  },
   "devDependencies": {
     "@babel/core": "^7.28.4",
     "@babel/preset-env": "^7.28.3",
@@ -31,3 +33,4 @@
     "webpack-dev-server": "^5.2.2"
   }
 }
+
