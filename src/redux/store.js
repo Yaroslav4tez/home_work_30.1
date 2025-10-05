@@ -1,35 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import listReducer from "./ListReducer";
-import loadingReducer from "./loadingReducer";
-import newTaskReducer  from "./newTaskReducer";
-import { createStore ,combineReducers, applyMiddleware } from "redux";
-import thunk from "redux-thunk";
+import { thunk } from "redux-thunk";
+import { combineReducers, applyMiddleware, createStore } from "redux";
+import { listReducer } from "./ListReducer";
+import { loadingReducer } from "./loadingReducer";
 
-const initialState = {
-    list: [],
-    isLoading: false,
-    newTask: {
-        text: '',
-        isDone: false
-    }
-};
-
-/*const store = configureStore({
-    reducer: {
-        list: listReducer,
-        isLoading: loadingReducer,
-        newTask: newTaskReducer,
-    },
-    preloadedState: initialState
-});
-*/
-
-const reducer = combineReducers({
-    list: listReducer,
-    isLoading: loadingReducer,
-    newTask: newTaskReducer
+const rootReducer = combineReducers({
+  list: listReducer,
+  isLoading: loadingReducer,
 });
 
-const store = createStore(reducer, initialState, applyMiddleware(thunk));
-
-export default store;
+export const store = createStore(rootReducer, applyMiddleware(thunk));

@@ -1,15 +1,12 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import Swapi from "./swapi/swapi";
 
-import Swapi from "./swapi/swapi.jsx";
-import Todo from "./todoList";
-
-
-const App = () => (
+const App = () => {
+  return (
     <div>
-        <Swapi/>
-        <Todo/>   
+      <Swapi />
     </div>
-);
+  );
+};
 
 export default App;
